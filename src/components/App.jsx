@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import Notiflix from 'notiflix';
+import storageHandler from '../utils/handlers/storageHandler';
 import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
@@ -11,13 +12,20 @@ import { Container } from './Container/Container.styled';
 
 export class App extends Component {
   state = {
-    contacts: [
-      { id: nanoid(), name: 'Rosie Simpson', number: '+380674591276' },
-      { id: nanoid(), name: 'Hermione Kline', number: '380674438912' },
-      { id: nanoid(), name: 'Eden Clements', number: '380676451779' },
-    ],
+    contacts: [],
     filter: '',
   };
+
+  componentDidMount() {
+    const savedContacts = storageHandler.loadFromLS('contacts-list') ?? [];
+    this.setState({ contacts: savedContacts });
+  }
+  componentDidUpdate(_, prevState) {
+    const { contacts } = this.state;
+    if (prevState.contacts !== contacts) {
+      storageHandler.saveToLS('contacts-list', contacts);
+    }
+  }
 
   addContact = contact => {
     if (
