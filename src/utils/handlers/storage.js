@@ -18,13 +18,13 @@ const loadFromLS = key => {
   }
 };
 
-const removeFromLS = key => {
-  try {
-    localStorage.removeItem(key);
-  } catch (error) {
-    console.log('Remove item error: ', error.message);
-  }
-};
+// const removeFromLS = key => {
+//   try {
+//     localStorage.removeItem(key);
+//   } catch (error) {
+//     console.log('Remove item error: ', error.message);
+//   }
+// };
 
 const storage = {
   saveToLS,
