@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import Notiflix from 'notiflix';
-import storageHandler from '../utils/handlers/storageHandler';
+import storage from 'utils/handlers/storage';
 import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
@@ -17,13 +17,13 @@ export class App extends Component {
   };
 
   componentDidMount() {
-    const savedContacts = storageHandler.loadFromLS('contacts-list') ?? [];
+    const savedContacts = storage.loadFromLS('contacts-list') ?? [];
     this.setState({ contacts: savedContacts });
   }
   componentDidUpdate(_, prevState) {
     const { contacts } = this.state;
     if (prevState.contacts !== contacts) {
-      storageHandler.saveToLS('contacts-list', contacts);
+      storage.saveToLS('contacts-list', contacts);
     }
   }
 

@@ -26,8 +26,8 @@ const removeFromLS = key => {
   }
 };
 
-export default {
+const storage = {
   saveToLS,
   loadFromLS,
-  removeFromLS,
 };
+export default storage;
