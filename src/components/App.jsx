@@ -28,11 +28,10 @@ export class App extends Component {
   }
 
   addContact = contact => {
-    if (
-      this.state.contacts.some(
-        el => el.name.toLowerCase() === contact.name.toLowerCase()
-      )
-    ) {
+    const isExist = this.state.contacts.some(
+      el => el.name.toLowerCase() === contact.name.toLowerCase()
+    );
+    if (isExist) {
       Notiflix.Notify.failure(`${contact.name} is already in contacts`);
       return;
     }
