@@ -95,8 +95,9 @@ button.qwe:hover {
 .sub {
   font-size: 68px;
   font-weight: 700;
-  color: rgb(17, 54, 133);
+  color: #113583;
   margin-bottom: 40px;
+  background-color: #f08b08;
 }
 @media (min-width: 576px) {
   .sub {

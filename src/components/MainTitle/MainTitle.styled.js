@@ -6,6 +6,7 @@ export const TitleH1 = styled.h2`
   color: rgb(17, 54, 133);
   margin-bottom: 40px;
 
- @media (min-width: 476px) {
+  @media (min-width: 476px) {
     font-size: 48px;
+  }
 `;
