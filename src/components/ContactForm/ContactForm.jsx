@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import Notiflix from 'notiflix';
 import { addContacts } from 'redux/operations';
-import { getContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
 
 import { Form, FormLabel, FormInput, AddButton } from './ContactForm.styled';
 
 export function ContactForm() {
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(selectContacts);
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
