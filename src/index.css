@@ -1,9 +1,13 @@
 @import-normalize; /* bring in normalize.css styles */
 
-/* .sub {
+.sub {
   font-size: 68px;
   font-weight: 700;
   color: #113583;
   margin-bottom: 40px;
   background-color: #f08b08;
-} */
+  background-color: #d49037;
+  background-color: #f5e1c7;
+  color: #113685;
+  text-shadow: 1px 1px 1px #113685;
+}

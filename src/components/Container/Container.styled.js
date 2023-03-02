@@ -1,13 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 50px 20px;
-
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 20px;
+  max-width: 1400px;
+  padding: 0px 15px;
+  margin: 0 auto;
 `;

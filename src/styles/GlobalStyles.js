@@ -63,6 +63,10 @@ img {
   height: auto;
 }
 body{
-	  background-color: rgb(245, 225, 199);
+
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+background-color: #f5e1c7;
+color: #113583;
 }
 `;

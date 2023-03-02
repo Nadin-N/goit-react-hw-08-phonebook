@@ -1,5 +1,24 @@
 import styled from 'styled-components';
 
+export const FilterSection = styled.section`
+  margin: 70px auto 0;
+  @media (min-width: 576px) {
+    width: 450px;
+  }
+`;
+
+export const TitleH2 = styled.h2`
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: rgb(17, 54, 133);
+  margin-bottom: 40px;
+
+  @media (min-width: 476px) {
+    font-size: 38px;
+  }
+`;
+
 export const SearchLabel = styled.label`
   line-height: 1.8;
   color: rgb(17, 54, 133);

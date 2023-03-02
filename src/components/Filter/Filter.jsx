@@ -1,19 +1,28 @@
-import { setFilterValue } from 'redux/filterSlice';
+import { setFilterValue } from 'redux/contacts/filterSlice';
 import { useDispatch } from 'react-redux';
-import { SearchInput, SearchLabel } from './Filter.styled';
+import {
+  FilterSection,
+  SearchInput,
+  SearchLabel,
+  TitleH2,
+} from './Filter.styled';
 
 export const Filter = () => {
   const dispatch = useDispatch();
 
   return (
-    <SearchLabel>
-      Find contacts by name
-      <SearchInput
-        type="text"
-        name="name"
-        required
-        onChange={e => dispatch(setFilterValue(e.target.value))}
-      />
-    </SearchLabel>
+    <FilterSection>
+      <TitleH2>Find contact</TitleH2>
+      <SearchLabel>
+        Find contacts by name
+        <SearchInput
+          type="text"
+          name="name"
+          required
+          placeholder="Enter name"
+          onChange={e => dispatch(setFilterValue(e.target.value))}
+        />
+      </SearchLabel>
+    </FilterSection>
   );
 };
