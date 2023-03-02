@@ -21,7 +21,7 @@ export const ContactList = () => {
   useEffect(() => {
     if (!isLoggedIn) return;
     dispatch(getContacts());
-  }, [dispatch]);
+  }, [dispatch, isLoggedIn]);
 
   const contacts = useSelector(selectFilteredContacts);
 
